@@ -9,7 +9,7 @@ import calendar
 sample_period = 1
 sensor = ads1115.ADS1115()
 
-with open('week6data.txt','a') as f:
+with open('week6data.txt','a',0) as f:
     while True:
         try:
             dt = datetime.utcnow()
