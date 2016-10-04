@@ -1,3 +1,4 @@
+# Live plotting ADC ADS1115's readings
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -5,18 +6,20 @@ import sys
 sys.path.append('../week3')
 import ads1115
 
+
 fig, ax = plt.subplots()
 line, = ax.plot(np.random.rand(10))
 ax.set_ylim(0, 1)
 
 
+length = 100
 sensor = ads1115.ADS1115()
 
 D = []
 def update(data):
     print data
     D.append(data)
-    while len(D) > 100:
+    while len(D) > length:
         D.pop(0)
     line.set_xdata(range(0,len(D)))
     line.set_ydata(D)
