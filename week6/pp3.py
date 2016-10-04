@@ -1,23 +1,25 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 
 # - - - - -
 # read text file
 D = []
-with open('week6data.txt') as f:
+with open('/home/pi/python/whatevertextyouhave.csv') as f:
     for line in f:
         line = line.strip().split(',')
-        D.append([line[0],float(line[1]),float(line[2])])
+        line = [float(tmp) for tmp in line]
+        #dt = datetime(int(line[0]),int(line[1]),int(line[2]),int(line[3]),int(line[4]),int(line[5]))
+        D.append(line)
 
-#D = zip(*D)
-#print(D)
+D = zip(*D)
 
 
 # - - - - -
 # choose your variable
-x = D[1]
-y = D[2]
+x = range(0,len(D[1]))
+y = D[6]
 
 
 # - - - - -
