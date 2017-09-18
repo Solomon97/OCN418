@@ -1,9 +1,8 @@
-import sys,time,traceback
-from os.path import expanduser
-sys.path.append(expanduser('~'))
+#/usr/bin/python3
+import time,traceback
 from datetime import datetime
 from bmp280_Py3driver import BMP280
-from node.drivers.lcd20x4 import *
+from lcd20x4 import LCD
 
 bus = 1
 

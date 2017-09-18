@@ -1,6 +1,9 @@
-import smbus
-import time
-import struct
+#/usr/bin/python3
+# Stanley H.I. Lio
+# hlio@hawaii.edu
+# University of Hawaii
+# All Rights Reserved. 2017
+import smbus,time,struct
 
 
 class SensorNotFoundException(Exception):
