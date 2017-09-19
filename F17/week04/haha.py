@@ -1,3 +1,4 @@
+##testing lcd fun in class
 import sys,time
 sys.path.append('/home/pi/Desktop/OCN418/F17/week04')
 from lcd20x4 import LCD
