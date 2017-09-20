@@ -1,0 +1,9 @@
+A set of demo showing how to transmit, broadcast, and receive using the UDP protocol.
+
+Run receive.py or broadcast.py in one terminal, then run transmit.py in another.
+
+Read more:
+https://en.wikipedia.org/wiki/User_Datagram_Protocol
+
+Stanley H.I. Lio
+2017

@@ -1,0 +1,4 @@
+File Input/Output demo. Run write.py first as read.py relies on the former's output.
+
+Stanley H.I. Lio
+2017
