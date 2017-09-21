@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 IP = '255.255.255.255'
-PORT = 5005
+PORT = 50005
 
 sock = socket(AF_INET,SOCK_DGRAM)
 sock.setsockopt(SOL_SOCKET,SO_BROADCAST,1)

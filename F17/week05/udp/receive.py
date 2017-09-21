@@ -6,7 +6,7 @@ import socket
 
 
 IP = ''
-PORT = 5005
+PORT = 50005
 
 sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 sock.bind((IP,PORT))
