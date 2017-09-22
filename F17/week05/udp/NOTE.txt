@@ -1,6 +1,14 @@
-A set of demo showing how to transmit, broadcast, and receive using the UDP protocol.
+A set of demos showing how to transmit, broadcast, and receive using the UDP protocol.
 
-Run receive.py or broadcast.py in one terminal, then run transmit.py in another.
+Demo1 - "schizophrenic":
+Run receive.py in one terminal, then run transmit.py in another.
+
+Demo2 - "firehose":
+Run receive.py in one terminal, then run broadcast.py in another.
+
+Demo3 - "all your base are belong to us" (https://goo.gl/N9m11c):
+Run ledserver.py in terminal, and ledcontrol.py in another. (set the target IP first)
+
 
 Read more:
 https://en.wikipedia.org/wiki/User_Datagram_Protocol
