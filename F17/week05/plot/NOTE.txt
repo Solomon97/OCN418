@@ -1,0 +1,10 @@
+Plotting in Python.
+
+Run them in this order:
+plotting.py
+fakedatagenerator.py
+plotcsv.py
+
+
+Stanley H.I. Lio
+2017

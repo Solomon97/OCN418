@@ -1,0 +1,9 @@
+
+Move a gauge to a perdetermined position.
+send.py
+
+Optional. Only if you have BMP280 hooked up:
+sendtemperature.py
+
+Stanley H.I. Lio
+2017
