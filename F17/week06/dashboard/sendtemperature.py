@@ -20,16 +20,10 @@ sensor = BMP280()
 while True:
     try:
         r = sensor.read()
-        #r = {'t':25,'p':101.325}
         m = '{},{}'.format(myid,r['t'])
         print(m)
         sock.sendto(bytearray(m,encoding='ascii'),(IP,PORT))
         time.sleep(1)
-
-        # Submit data to the OCN418 IoT server
-        #m = '{},{},{}\n'.format(socket.gethostname(),time.time(),r['t'])
-        #sock.sendto(bytearray(m,encoding='ascii'),('192.168.2.200',50007))
-        #time.sleep(60)
     except KeyboardInterrupt:
         break
     except:
