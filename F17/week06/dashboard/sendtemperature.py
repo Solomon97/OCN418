@@ -2,12 +2,12 @@
 #
 # Stanley H.I. Lio
 # hlio@hawaii.edu
-import socket,sys,time
+import socket,sys,time,tracback
 sys.path.append('../../week04')
 from bmp280_Py3driver import BMP280
 
 
-# your ID can be an integer in [1,20]
+# your ID should be an integer in [1,20]
 myid = 1
 
 IP = '192.168.2.200'
@@ -18,8 +18,19 @@ sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 sensor = BMP280()
 
 while True:
-    r = sensor.read()
-    m = '{},{}'.format(myid,r['t'])
-    print(m)
-    sock.sendto(bytearray(m,encoding='ascii'),(IP,PORT))
-    time.sleep(1)
+    try:
+        r = sensor.read()
+        #r = {'t':25,'p':101.325}
+        m = '{},{}'.format(myid,r['t'])
+        print(m)
+        sock.sendto(bytearray(m,encoding='ascii'),(IP,PORT))
+        time.sleep(1)
+
+        # Submit data to the OCN418 IoT server
+        #m = '{},{},{}\n'.format(socket.gethostname(),time.time(),r['t'])
+        #sock.sendto(bytearray(m,encoding='ascii'),('192.168.2.200',50007))
+        #time.sleep(60)
+    except KeyboardInterrupt:
+        break
+    except:
+        traceback.print_exc()

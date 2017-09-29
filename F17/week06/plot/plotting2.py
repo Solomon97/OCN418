@@ -1,21 +1,37 @@
 # Plot your own "IoT data".
 #
-# Source:
-# https://matplotlib.org/examples/pylab_examples/simple_plot.html
+# In terminal, do this first: "pip3 install requests"
+#
+# Stanley H.I. Lio
+# hlio@hawaii.edu
 import matplotlib.pyplot as plt
-import numpy as np
-import requests
+import requests,socket,traceback
 
 
+# FETCHING
 d = requests.get('http://192.168.2.200/data.txt')
-print(d.text)
-exit()
+#print(d.text)
 
-plt.plot(t,s)
 
-plt.xlabel('take the cannoli')
-plt.ylabel('leave the gun')
-plt.title('why eagles can\'t swim')
+# PARSING
+myid = socket.gethostname()
+x,y = [],[]
+for line in d.text.split('\n'):
+    try:
+        line = line.strip().split(',')
+        if myid == line[0]:
+            print(line)
+            x.append(float(line[1]))
+            y.append(float(line[2]))
+    except:
+        traceback.print_exc()
+
+
+# PLOTTING
+plt.plot(x,y)
+plt.xlabel('Seconds since 1970, hopefully')
+plt.ylabel('Probably temperature')
+plt.title('Likely to be Temperature Data')
 plt.grid(True)
-plt.savefig('bourgeoisie.png')
+plt.savefig('birdwatcher.png')
 plt.show()
