@@ -1,4 +1,4 @@
-##testing lcd fun in class
+##testing lcd fun in class - horizontal scroll
 import sys,time
 sys.path.append('/home/pi/Desktop/OCN418/F17/week04')
 from lcd20x4 import LCD
