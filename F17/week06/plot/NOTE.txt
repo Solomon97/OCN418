@@ -1,0 +1,13 @@
+Plotting in Python. Run them in this order:
+plotting.py
+fakedatagenerator.py
+plotcsv.py
+
+
+matplotlib doesn't work on RPi Raspbian? Complaining something about "cairo"?
+sudo apt install python3-pip
+sudo pip3 install matplotlib
+sudo apt install -y python3-gi-cairo python3-cairocffi
+
+Stanley H.I. Lio
+2017
