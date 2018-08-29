@@ -1,0 +1,30 @@
+Week 2
+
+Raspbery Pi setup. Terminal intro/refresher.
+
+"Homework":
+
+Update the software on your Pi. Updating takes time so you will want to do that before the next class. Execute these commands:
+
+	sudo apt update
+	sudo apt upgrade -y
+
+Also I strongly recommend bringing your own laptop for the next class. For your own laptop, get an SSH client, an FTP client, and Python 3:
+
+	Python 3
+		https://www.python.org/downloads/
+		I recommend 3.6. 3.7 is the latest-greatest but you will run into feature and library compatibility issues.
+	
+	If you use Windows, install PuTTY and WinSCP:
+		https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi
+		https://winscp.net/eng/download.php
+
+	Mac has SSH client built-in. For FTP client, this seems to be a good choice:
+		https://cyberduck.io/
+	(I have no experience with Mac. Here's a YouTube tutorial from 2013: https://youtu.be/it4NyAH6ml8)
+
+
+You can bring your own USB keyboard and mouse if you prefer. The station is assigned to you for the semester so you can set it up as you see fit.
+
+If you are interested in getting your own Pi to mess with at home, Amazon got them as kits:
+https://www.amazon.com/CanaKit-Raspberry-Complete-Starter-Kit/dp/B0778CZ97B/ref=sr_1_13?ie=UTF8&qid=1535534487&sr=8-13&keywords=raspberry+pi
