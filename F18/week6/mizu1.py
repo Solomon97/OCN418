@@ -12,8 +12,7 @@ url = 'https://tidesandcurrents.noaa.gov/api/datagetter?product=water_level&appl
 
 
 # noaa
-r = requests.get(url)
-r = r.json()
+r = requests.get(url).json()
 dt = [datetime.strptime(d['t'], '%Y-%m-%d %H:%M') for d in r['data']]       # <- list comprehension
 feet = [float(d['v']) for d in r['data']]
 

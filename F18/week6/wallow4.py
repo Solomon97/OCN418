@@ -5,7 +5,6 @@ import RPi.GPIO as GPIO
 
 # definition
 button = 21
-N = 8
 counter = 0
 
 # ignore this
@@ -34,7 +33,7 @@ while True:
         if not GPIO.input(button):
             print('light #{}'.format(counter))
             
-            counter = (counter + 1) % N
+            counter = (counter + 1) % len(pins)
 
             zuko(counter)
             

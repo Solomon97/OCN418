@@ -6,7 +6,6 @@ import RPi.GPIO as GPIO
 
 # definition
 button = 21
-N = 8
 counter = 0
 
 # always include but ignore this
@@ -26,7 +25,7 @@ while True:
     if not GPIO.input(button):
         print('{} hit'.format(counter))
         
-        counter = (counter + 1) % N
+        counter = (counter + 1) % len(pins)
 
         if 0 == counter:
             for pin in pins:                                # turn off all light

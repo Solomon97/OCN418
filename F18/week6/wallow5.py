@@ -5,7 +5,6 @@ import RPi.GPIO as GPIO
 
 # definition
 button = 21
-N = 8
 counter = 0
 
 # ignore this
@@ -20,6 +19,7 @@ for pin in pins:
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, GPIO.LOW)
 GPIO.output(pins[0], GPIO.HIGH)
+N = len(pins)
 
 
 def zuko(which):
